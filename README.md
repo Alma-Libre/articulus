@@ -2,6 +2,14 @@
 
 Write and read articles.
 
+## To Build
+>Firstly install dependencies
+> run "npm install"
+> run "npm run client-install"
+>
+>run "npm run dev" to start both react and node dev servers together
+>react server is on port 5000 while node server is on port 3000 (localhost)
+
 ## Keys
 
 Add keys in "./config/keys.js" and export them
