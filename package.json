@@ -1,0 +1,26 @@
+{
+  "name": "articulus",
+  "version": "1.0.0",
+  "description": "bloggin site",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "author": "Alma Libre",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.4.20",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^10.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
