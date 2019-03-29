@@ -70,7 +70,7 @@ router.post("/login", (req, res) => {
         // User matched
 
         //payload with id, name and avatar
-        const payload = { id: user.id, name: user.name, email: user.email };
+        const payload = { id: user.id, name: user.name, avatar: user.avatar };
 
         // sign token
         jwt.sign(
