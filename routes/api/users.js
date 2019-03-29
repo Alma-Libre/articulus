@@ -55,7 +55,7 @@ router.post("/register", (req, res) => {
 // @route   POST api/users/register
 // @desc    Register a user
 // @access  Public
-router.post("login", (req, res) => {
+router.post("/login", (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
 
@@ -75,7 +75,7 @@ router.post("login", (req, res) => {
         // sign token
         jwt.sign(
           payload,
-          secretOrKey,
+          keys.secretOrkey,
           { expiresIn: 3600 * 24 * 3 },
           (err, token) => {
             res.send({
@@ -90,5 +90,20 @@ router.post("login", (req, res) => {
     });
   });
 });
+
+// @route   GET api/users/current
+// @desc    Return current user
+// @access  Private
+router.get(
+  "/current",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    res.json({
+      id: req.user.id,
+      name: req.user.name,
+      email: req.user.email
+    });
+  }
+);
 
 module.exports = router;
