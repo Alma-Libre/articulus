@@ -3,17 +3,19 @@
 Write and read articles.
 
 ## To Build
->Firstly install dependencies using
-> "npm install" and
+
+> Firstly install dependencies using \
+> "npm install" and \
 > "npm run client-install" ,
 >
->use "npm run dev" to start both react and node dev servers together ,
->react server is on port 5000 while node server is on port 3000 (localhost)
+> use "npm run dev" to start both react and node dev servers together ,
+> react server is on port 5000 while node server is on port 3000 (localhost)
 
 ## Keys
 
-Add keys in "./config/keys.js" and export them
+Add keys in "./config/credentials.js" and export them
 
-> mongoURI: `"mongodb://<dbuser>:<dbpassword>@ds127646.mlab.com:27646/articulus"`,
->
-> secretOrkey: "secretkey"
+> module.exports = { \
+> mongoURI: "mongodb://aarsh:aar\$h00@ds127646.mlab.com:27646/articulus", \
+> secretOrKey: "secretkey" \
+> };
