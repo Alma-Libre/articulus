@@ -16,6 +16,6 @@ Write and read articles.
 Add keys in "./config/credentials.js" and export them
 
 > module.exports = { \
-> mongoURI: "mongodb://aarsh:aar\$h00@ds127646.mlab.com:27646/articulus", \
+> mongoURI: "mongodb://\<dbuser>:\<dbpassword>@ds127646.mlab.com:27646/articulus", \
 > secretOrKey: "secretkey" \
 > };
