@@ -3,15 +3,24 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 
+const users = require("./routes/api/users");
+const profile = require("./routes/api/profile");
+const blogs = require("./routes/api/blogs");
+
 const app = express();
 
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-const users = require("./routes/api/users");
-const profile = require("./routes/api/profile");
-const blogs = require("./routes/api/blogs");
+// DB Config
+const db = require("./config/keys").mongoURI;
+
+// Connect to MongoDB
+mongoose
+  .connect(db, { useNewUrlParser: true })
+  .then(() => console.log("connected to database..."))
+  .catch(err => console.log(err));
 
 // Use routes
 app.use("/api/users", users);
