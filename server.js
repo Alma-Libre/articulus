@@ -5,7 +5,7 @@ const passport = require("passport");
 
 const users = require("./routes/api/users");
 const profile = require("./routes/api/profile");
-const blogs = require("./routes/api/blogs");
+const articles = require("./routes/api/article");
 
 const app = express();
 
@@ -31,7 +31,7 @@ require("./config/passport")(passport);
 // Use routes
 app.use("/api/users", users);
 app.use("/api/profile", profile);
-app.use("/api/blogs", blogs);
+app.use("/api/articles", articles);
 
 app.get("/", (req, res) => {
   console.log("request at homepage");
