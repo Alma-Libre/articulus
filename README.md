@@ -6,8 +6,9 @@ Write and read articles.
 
 ## To Build
 
-Firstly install dependencies using `npm install` and `npm run client-install`, use `npm run dev` to start both react and node dev servers together , \
-react server is on port 5000 while node server is on port 3000 (localhost)
+1. Install dependencies using `npm install` and `npm run client-install`.
+2. Use `npm run dev` to start both react and node dev servers together.
+3. React server is on port 5000 while node server is on port 3000 (localhost).
 
 ## Keys
 
